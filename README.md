@@ -12,3 +12,7 @@ A RSA module for python that i have coded. Major functionalities include :
   exemple : on windows with Py 3.2 - "C:\Python32\Lib"
 ##### 2. Include with your project files
   You just need to include 'rsa.py' on your project's root and include it with 'import rsa'
+### License
+Only for a learning and personnal (non commercial) use, please mention the github directory if you publish a project that use this module.
+
+https://github.com/Theo6898
