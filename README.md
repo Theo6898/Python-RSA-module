@@ -13,6 +13,6 @@ A RSA module for python that i have coded. Major functionalities include :
 ##### 2. Include with your project files
   You just need to include 'rsa.py' on your project's root and include it with 'import rsa'
 ### License
-Only for a learning and personnal (non commercial) use, please mention the github directory if you publish a project that use this module.
+Only for a learning and personnal (non commercial) use, please mention the github directory if you publish a project that use this module or if you want to share it. Thanks :)
 
 https://github.com/Theo6898
