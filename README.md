@@ -16,3 +16,5 @@ A RSA module for python that i have coded. Major functionalities include :
 Only for a learning and personnal (non commercial) use, please mention the github directory if you publish a project that use this module or if you want to share it. Thanks :)
 
 https://github.com/Theo6898
+### More informations
+https://en.wikipedia.org/wiki/RSA_%28cryptosystem%29
