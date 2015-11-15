@@ -1,7 +1,6 @@
 import math
 import random
 import decimal
-import os
 import hashlib
 
 # RSA MODULE FOR PYTHON 3
