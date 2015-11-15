@@ -5,7 +5,7 @@ A RSA module for python that i have coded. Major functionalities include :
   - Sign messages
   - Check signatures
   
-### How to install
+### How to use
 ##### 1. Permanent install
   Put the file 'rsa.py' in the 'Lib' folder of you Python's installation. In order to use the module you juste have to put 'import rsa' in your code
   
