@@ -1,5 +1,4 @@
 import rsa
-import os
 
 # FAKE WORKING EXEMPLE on PYTHON 3
 # RSA module version 1.0 (15 nov 2015)
@@ -21,5 +20,3 @@ if rsa.check_signature(data_decrypted, data_signed, publicKeyUser) == True:
 	print("Message received :\n", data_decrypted)
 else:
 	print("Invalid signature, man in the middle attack")
-
-os.system("pause")
