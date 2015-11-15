@@ -1,7 +1,9 @@
 import rsa
 
 # FAKE WORKING EXEMPLE on PYTHON 3
-# RSA module version 1.0 (15 nov 2015)
+# from https://github.com/Theo6898/Python-RSA-module
+# version 1.0 - 15 november 2015
+
 # For security issues, server and user need to know their respective public keys for sure
 # You need a trust authoritie to check if the public keys are correct
 
@@ -10,7 +12,7 @@ publicKeyUser, privateKeyUser = rsa.generateKeyPair("RSA-1024")
 publicKeyServer, privateKeyServer = rsa.generateKeyPair("RSA-1024")
 
 # user crypt message with server's public key and sign it with its own private key
-data = ["GET /index.php", "ssl-version: 1.0"]
+data = ["Hellow this a message", "And another one !"]
 data_crypted = rsa.crypt(data, publicKeyServer)
 data_signed = rsa.sign(data, privateKeyUser)
 
