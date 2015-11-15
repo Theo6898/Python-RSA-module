@@ -4,7 +4,9 @@ import decimal
 import os
 import hashlib
 
-# RSA MODULE VERSION 1.0 (15 nov 2015)
+# RSA MODULE FOR PYTHON 3
+# from https://github.com/Theo6898/Python-RSA-module
+# version 1.0 - 15 november 2015
 
 def check_signature(data, hash, key):
 	h = hashlib.sha256()
@@ -57,13 +59,11 @@ def decrypt(data, key):
 		i += 1
 	return data_send
 	
-def pgcd(a,b):
-	# On trie les valeurs pour que a >= b
+def gcd(a,b):
 	if a < b:
 		a, b = b, a
 	
-	# Alogithme d'euclide
-	# fr.wikipedia.org/wiki/Algorithme_d'Euclide
+	# Euclide algorithm
 	r = 1
 	while r != 0:
 		r = a%b
@@ -105,11 +105,9 @@ def modinv(a, m):
 
 def getRandomPrimeNumber(a,b):
 	rand = random.SystemRandom()
-	found = False
 	nbr = rand.randint(a,b)
 	
-	# Test de primalité de Fermat (probabiliste)
-	# fr.wikipedia.org/wiki/Test_de_primalit%C3%A9_de_Fermat
+	# Fermat theorem
 	while pow(2,nbr-1,nbr) != 1 or pow(3,nbr-1,nbr) != 1 or pow(5,nbr-1,nbr) != 1 or pow(7,nbr-1,nbr) != 1:
 		nbr = rand.randint(a,b)
 
@@ -162,7 +160,7 @@ def generateKeyPair(rsaType):
 	euler = (p-1)*(q-1)
 	
 	e = rand.randint(2, 25)
-	while pgcd(euler, e) != 1:
+	while gcd(euler, e) != 1:
 		e = rand.randint(2, 25)
 	
 	d = modinv(e, euler)
@@ -174,27 +172,5 @@ def generateKeyPair(rsaType):
 	privateKeyFile = open("private.key", "w")
 	privateKeyFile.write("{},{}".format(d,n))
 	privateKeyFile.close()
-	
-	# with open('test.txt', 'rb') as f:
-		# data = f.read()
-		# text = ""
-		# for c in data:
-			# text += str((c**e)%n)+","
-		# text = text[:-1]
-			
-		# with open('crypted.txt', 'wb') as f:
-			# f.write(text.encode('utf-8'))
-			
-		# with open('crypted.txt', 'rb') as f:
-			# letters = f.read().decode().split(",")
-			# for letter in letters:
-				# print(chr(pow(int(letter), d, n)).encode('utf-8'))
-		
-	# C = (65**e)%n
-	# print("\nCrypted:\n", C)
-	
-	# M = pow(C, d, n)
-	# print("\nDecrypted:\n", M)
+
 	return (e,n), (d,n)
-	
-	
