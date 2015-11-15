@@ -12,7 +12,7 @@ publicKeyUser, privateKeyUser = rsa.generateKeyPair("RSA-1024")
 publicKeyServer, privateKeyServer = rsa.generateKeyPair("RSA-1024")
 
 # user crypt message with server's public key and sign it with its own private key
-data = ["Hellow this a message", "And another one !"]
+data = ["Hello this a message", "And another one !"]
 data_crypted = rsa.crypt(data, publicKeyServer)
 data_signed = rsa.sign(data, privateKeyUser)
 
