@@ -1,5 +1,5 @@
 # Python-RSA-module
-A RSA module for python that i have coded. Major functionalities :
+A RSA module for python that i have coded. Major functionalities include :
   - Create pairs of RSA keys
   - Crypt and decrypt messages
   - Sign messages
